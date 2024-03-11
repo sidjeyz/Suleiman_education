@@ -1,0 +1,39 @@
+# OS X
+.DS_Store
+.idea/
+*.ipa
+*.env
+*.lock
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+Templates
+*.hmap
+*.xccheckout
+*.xcworkspacedata
+
+fastlane/*.env
+fastlane/*.xml
+
+# CocoaPods
+Pods
+Podfile.lock
+MosmetroNew.app.dSYM.zip
+*.junit
+fastlane/test_output/report.html
+*.DS_Store
+MosmetroNew.app.dSYM.zip
+*.lock
