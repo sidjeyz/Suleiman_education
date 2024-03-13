@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="59" id="8uA-Bg-ckR" customClass="DocCell" customModule="ToDoAppGS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="59"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8uA-Bg-ckR" id="A3m-oj-jfx">
+                <rect key="frame" x="0.0" y="0.0" width="464" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PEV-h5-gWf">
+                        <rect key="frame" x="12" y="11" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="FEI-9O-dw6"/>
+                            <constraint firstAttribute="height" constant="32" id="GKA-B4-Cwe"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="TQT-1j-8dD"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="xaa-P0-DTd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UET-0d-Tzi">
+                        <rect key="frame" x="56" y="17" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emk-Py-WEi">
+                        <rect key="frame" x="401" y="11" width="53" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="7eW-rF-c9X"/>
+                            <constraint firstAttribute="height" constant="31" id="dHv-jR-lRC"/>
+                        </constraints>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="emk-Py-WEi" secondAttribute="trailing" constant="12" id="0jf-zH-4yH"/>
+                    <constraint firstItem="UET-0d-Tzi" firstAttribute="leading" secondItem="PEV-h5-gWf" secondAttribute="trailing" constant="12" id="8lI-pC-ACu"/>
+                    <constraint firstItem="PEV-h5-gWf" firstAttribute="leading" secondItem="A3m-oj-jfx" secondAttribute="leading" constant="12" id="AU4-ef-MRm"/>
+                    <constraint firstItem="UET-0d-Tzi" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="17" id="ChH-bm-d3P"/>
+                    <constraint firstItem="UET-0d-Tzi" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="17" id="Szw-Ug-p4w"/>
+                    <constraint firstAttribute="bottom" secondItem="PEV-h5-gWf" secondAttribute="bottom" constant="11" id="Tbw-s5-7Wa"/>
+                    <constraint firstItem="UET-0d-Tzi" firstAttribute="leading" secondItem="PEV-h5-gWf" secondAttribute="trailing" constant="12" id="XN1-EQ-s9F"/>
+                    <constraint firstItem="emk-Py-WEi" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="11" id="aek-Lp-j8t"/>
+                    <constraint firstItem="PEV-h5-gWf" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="11" id="bCu-bc-jDd"/>
+                    <constraint firstItem="emk-Py-WEi" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="11" id="jMA-T9-45k"/>
+                    <constraint firstAttribute="trailing" secondItem="emk-Py-WEi" secondAttribute="trailing" constant="12" id="mYe-7Y-Ksb"/>
+                    <constraint firstItem="PEV-h5-gWf" firstAttribute="leading" secondItem="A3m-oj-jfx" secondAttribute="leading" constant="12" id="nwu-D1-Qvf"/>
+                    <constraint firstAttribute="bottom" secondItem="UET-0d-Tzi" secondAttribute="bottom" constant="17" id="uGm-4g-SvA"/>
+                    <constraint firstItem="PEV-h5-gWf" firstAttribute="top" secondItem="A3m-oj-jfx" secondAttribute="top" constant="11" id="wnT-Qa-0ao"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="docImageView" destination="PEV-h5-gWf" id="FfB-eb-5CL"/>
+                <outlet property="docLabel" destination="UET-0d-Tzi" id="dTp-pu-C0F"/>
+                <outlet property="docSwitch" destination="emk-Py-WEi" id="xTV-ZO-FVG"/>
+            </connections>
+            <point key="canvasLocation" x="274.80916030534348" y="65.140845070422543"/>
+        </tableViewCell>
+    </objects>
+</document>

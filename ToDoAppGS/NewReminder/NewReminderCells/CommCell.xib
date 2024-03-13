@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="yZ6-va-FXB" customClass="CommCell" customModule="ToDoAppGS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yZ6-va-FXB" id="CQQ-ja-uMK">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="cccc" translatesAutoresizingMaskIntoConstraints="NO" id="6Xn-Az-pyj">
+                        <rect key="frame" x="10" y="16" width="331" height="84"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="84" id="4W3-u0-S9v"/>
+                            <constraint firstAttribute="width" constant="331" id="6cV-QA-Wcv"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="333" id="Cth-CV-9bj"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="x8p-Oq-QRj"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6Xn-Az-pyj" secondAttribute="trailing" id="KaU-mf-kUM"/>
+                    <constraint firstAttribute="bottom" secondItem="6Xn-Az-pyj" secondAttribute="bottom" id="L0w-U2-hKR"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="top" secondItem="CQQ-ja-uMK" secondAttribute="top" constant="16" id="MuS-OB-eVH"/>
+                    <constraint firstAttribute="bottom" secondItem="6Xn-Az-pyj" secondAttribute="bottom" id="QeX-q2-iRm"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="leading" secondItem="CQQ-ja-uMK" secondAttribute="leading" constant="12" id="b50-bG-P7x"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="leading" secondItem="CQQ-ja-uMK" secondAttribute="leading" constant="10" id="c2Y-zC-EEE"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="top" secondItem="CQQ-ja-uMK" secondAttribute="top" constant="16" id="ce8-fz-dFz"/>
+                    <constraint firstAttribute="bottom" secondItem="6Xn-Az-pyj" secondAttribute="bottom" id="d9y-7m-nCK"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="top" secondItem="CQQ-ja-uMK" secondAttribute="top" constant="16" id="eKc-hD-ixm"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="leading" secondItem="CQQ-ja-uMK" secondAttribute="leading" constant="10" id="gq0-g8-9De"/>
+                    <constraint firstItem="6Xn-Az-pyj" firstAttribute="leading" secondItem="CQQ-ja-uMK" secondAttribute="leading" constant="12" id="j15-jM-yWI"/>
+                    <constraint firstAttribute="trailing" secondItem="6Xn-Az-pyj" secondAttribute="trailing" id="oB3-Mp-jVm"/>
+                    <constraint firstAttribute="trailing" secondItem="6Xn-Az-pyj" secondAttribute="trailing" id="oHK-QZ-KVB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="commTextView" destination="6Xn-Az-pyj" id="dAf-2x-b8u"/>
+            </connections>
+            <point key="canvasLocation" x="200.76335877862596" y="-47.887323943661976"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

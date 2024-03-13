@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController2: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate {
+class NewReminderController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate {
 
     
     @IBOutlet weak var tableViewNewCase: UITableView!
-    var secs: [Section] = []
+    var secstions: [SectionNewReminder] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,14 @@ class ViewController2: UIViewController, UITableViewDataSource, UITableViewDeleg
         let nib4 = UINib(nibName: "DocCell", bundle: nil)
         tableViewNewCase.register(nib4, forCellReuseIdentifier: "DocCell")
         
-        secs = [
-            Section(items: [.title(TitleCells(title: "")),.comm(CommCells(comm: ""))]),
+        secstions = [
+            SectionNewReminder(items: [.title(TitleCellNewReminder(title: "")),.comm(CommCellNewReminder(comm: ""))]),
             
-            Section(items: [.list(ListCells(icon: UIImage(named: "Image"), list: "Список", category: "Все"))]),
+            SectionNewReminder(items: [.list(ListCellNewReminder(icon: UIImage(named: "Image"), list: "Список", category: "Все >"))]),
             
-            Section(items: [.doc(DocCells(image: UIImage(named: "data"), title: "Дата", switcher: true)),.doc(DocCells(image: UIImage(named: "time"), title: "Время", switcher: true))]),
+            SectionNewReminder(items: [.doc(DocCellNewReminder(image: UIImage(named: "data"), title: "Дата", switcher: true)),.doc(DocCellNewReminder(image: UIImage(named: "time"), title: "Время", switcher: true))]),
             
-            Section(items: [.doc(DocCells(image: UIImage(named: "location"), title: "Местоположние", switcher: true))])
+            SectionNewReminder(items: [.doc(DocCellNewReminder(image: UIImage(named: "location"), title: "Местоположние", switcher: true))])
             ]
         }
     
