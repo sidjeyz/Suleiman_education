@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="483" id="5i9-tU-51i" customClass="DatePickerCell" customModule="ToDoAppGS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="483"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5i9-tU-51i" id="n43-pb-5ie">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="483"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-jb-3Ni">
+                        <rect key="frame" x="0.0" y="0.0" width="368" height="483"/>
+                    </datePicker>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="BYF-jb-3Ni" secondAttribute="bottom" id="2iu-ig-fup"/>
+                    <constraint firstAttribute="trailing" secondItem="BYF-jb-3Ni" secondAttribute="trailing" id="oZR-1u-uC1"/>
+                    <constraint firstItem="BYF-jb-3Ni" firstAttribute="top" secondItem="n43-pb-5ie" secondAttribute="top" id="qIE-f4-JRI"/>
+                    <constraint firstItem="BYF-jb-3Ni" firstAttribute="leading" secondItem="n43-pb-5ie" secondAttribute="leading" id="wNv-62-XTQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="datePickerForSwitch" destination="BYF-jb-3Ni" id="hVJ-3K-ts9"/>
+            </connections>
+            <point key="canvasLocation" x="424.4274809160305" y="264.43661971830988"/>
+        </tableViewCell>
+    </objects>
+</document>

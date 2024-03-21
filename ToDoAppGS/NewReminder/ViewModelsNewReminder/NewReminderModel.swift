@@ -32,9 +32,14 @@ struct ListCellNewReminder{
     let category: String
 }
 
+struct DatePickerNewReminder{
+    let date: Date
+}
+
 enum CellNewReminder{
     case doc(DocCellNewReminder)
     case comm(CommCellNewReminder)
     case title(TitleCellNewReminder)
     case list(ListCellNewReminder)
+    case date(DatePickerNewReminder)
 }

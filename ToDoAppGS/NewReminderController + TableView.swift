@@ -8,17 +8,22 @@
 import Foundation
 import UIKit
 
-extension NewReminderController{
+extension NewReminderController: NewReminderDelegete{
+    func textViewDidEndEditing(text: String) {
+        print("Received text from cell: \(text)")
+
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return secstions[section].items.count
+        return sections[section].items.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return secstions.count
+        return sections.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = secstions[indexPath.section].items[indexPath.row]
+        let item = sections[indexPath.section].items[indexPath.row]
         switch item{
             
         case .doc(let docItem):
@@ -28,18 +33,23 @@ extension NewReminderController{
         case .comm(let commItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommCell", for: indexPath) as! CommCell
             cell.configure(comm: commItem.comm)
+            cell.delegate = self
             return cell
         case .title(let titleItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as! TitleCell
             cell.configure(title: titleItem.title)
+            cell.delegate = self
             return cell
         case .list(let listItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
             cell.configure(icon: listItem.icon, list: listItem.list, category: listItem.category)
             return cell
+        case .date(let dateItem):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DatePickerCell", for: indexPath) as! DatePickerCell
+            cell.configure(date: dateItem.date)
+            return cell
         }
      
     }
-
     
 }

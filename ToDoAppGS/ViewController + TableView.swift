@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 private let items: [CategoryCells] = [
     CategoryCells(icon: UIImage(named: "all"), count: "5", text: "Все"),
+    CategoryCells(icon: UIImage(named: "family"), count: "3", text: "Семья"),
+    CategoryCells(icon: UIImage(named: "work"), count: "4", text: "Работа")
 ]
 extension ViewController {
     
@@ -17,7 +19,7 @@ extension ViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return items.count / items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

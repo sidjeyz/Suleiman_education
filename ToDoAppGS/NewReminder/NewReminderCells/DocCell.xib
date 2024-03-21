@@ -59,7 +59,7 @@
             <connections>
                 <outlet property="docImageView" destination="PEV-h5-gWf" id="FfB-eb-5CL"/>
                 <outlet property="docLabel" destination="UET-0d-Tzi" id="dTp-pu-C0F"/>
-                <outlet property="docSwitch" destination="emk-Py-WEi" id="xTV-ZO-FVG"/>
+                <outlet property="docSwitch" destination="emk-Py-WEi" id="7Hf-Va-uMO"/>
             </connections>
             <point key="canvasLocation" x="274.80916030534348" y="65.140845070422543"/>
         </tableViewCell>

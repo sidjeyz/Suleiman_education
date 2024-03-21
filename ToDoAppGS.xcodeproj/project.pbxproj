@@ -19,6 +19,8 @@
 		5ED175422BA1D2DC00B2014B /* DocCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED175412BA1D2DC00B2014B /* DocCell.xib */; };
 		5ED175442BA1D2ED00B2014B /* DocCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED175432BA1D2ED00B2014B /* DocCell.swift */; };
 		5ED175462BA1F18300B2014B /* NewReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED175452BA1F18300B2014B /* NewReminderModel.swift */; };
+		5ED1754D2BA6221500B2014B /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED1754C2BA6221500B2014B /* DatePickerCell.xib */; };
+		5ED1754F2BA8605300B2014B /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1754E2BA8605300B2014B /* DatePickerCell.swift */; };
 		5EDBF8CC2B8BD91E0085B335 /* NewReminderController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBF8CB2B8BD91E0085B335 /* NewReminderController + TableView.swift */; };
 		D88566172B66C92E00BDAA88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88566162B66C92E00BDAA88 /* AppDelegate.swift */; };
 		D88566192B66C92E00BDAA88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88566182B66C92E00BDAA88 /* SceneDelegate.swift */; };
@@ -58,6 +60,8 @@
 		5ED175412BA1D2DC00B2014B /* DocCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocCell.xib; sourceTree = "<group>"; };
 		5ED175432BA1D2ED00B2014B /* DocCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocCell.swift; sourceTree = "<group>"; };
 		5ED175452BA1F18300B2014B /* NewReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderModel.swift; sourceTree = "<group>"; };
+		5ED1754C2BA6221500B2014B /* DatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerCell.xib; sourceTree = "<group>"; };
+		5ED1754E2BA8605300B2014B /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		5EDBF8CB2B8BD91E0085B335 /* NewReminderController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewReminderController + TableView.swift"; sourceTree = "<group>"; };
 		D88566132B66C92E00BDAA88 /* ToDoAppGS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppGS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88566162B66C92E00BDAA88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				5ED1753F2BA1D04D00B2014B /* CommCell.xib */,
 				5ED175432BA1D2ED00B2014B /* DocCell.swift */,
 				5ED175412BA1D2DC00B2014B /* DocCell.xib */,
+				5ED1754E2BA8605300B2014B /* DatePickerCell.swift */,
+				5ED1754C2BA6221500B2014B /* DatePickerCell.xib */,
 			);
 			path = NewReminderCells;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D88566232B66C92F00BDAA88 /* LaunchScreen.storyboard in Resources */,
+				5ED1754D2BA6221500B2014B /* DatePickerCell.xib in Resources */,
 				D88566202B66C92F00BDAA88 /* Assets.xcassets in Resources */,
 				5ED175422BA1D2DC00B2014B /* DocCell.xib in Resources */,
 				5ED1753C2BA0E89D00B2014B /* TitleCell.xib in Resources */,
@@ -268,6 +275,7 @@
 				5ED175462BA1F18300B2014B /* NewReminderModel.swift in Sources */,
 				5ED1753A2BA0E88600B2014B /* TitleCell.swift in Sources */,
 				D885661B2B66C92E00BDAA88 /* ViewController.swift in Sources */,
+				5ED1754F2BA8605300B2014B /* DatePickerCell.swift in Sources */,
 				5EDBF8CC2B8BD91E0085B335 /* NewReminderController + TableView.swift in Sources */,
 				D88566172B66C92E00BDAA88 /* AppDelegate.swift in Sources */,
 				5EBE14112B88EEA7001437E9 /* NewReminderController.swift in Sources */,

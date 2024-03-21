@@ -9,19 +9,20 @@ import Foundation
 import UIKit
 class TitleCell: UITableViewCell, UITextFieldDelegate{
     
-    
+    weak var delegate: NewReminderDelegete?
     @IBOutlet weak var titleTextField: UITextField!
-    
-    override func awakeFromNib(){
+    var savedText: String = " "
+    override func awakeFromNib() {
         super.awakeFromNib()
         titleTextField.delegate = self
     }
-    
     func configure(title: String){
         titleTextField.text = title
     }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+            delegate?.textViewDidEndEditing(text: textView.text)
+        }
+
 }
-extension NewReminderController: UITextFieldDelegate{
-    
-}
+

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 class DocCell: UITableViewCell{
-    
     @IBOutlet weak var docSwitch: UISwitch!
     @IBOutlet weak var docLabel: UILabel!
     @IBOutlet weak var docImageView: UIImageView!
