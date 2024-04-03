@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 
 struct SectionNewReminder{
-    let items: [CellNewReminder]
+    var items: [CellNewReminder]
 }
 
 struct DocCellNewReminder {
     let image: UIImage?
     let title: String
     let switcher: Bool
+    let type: DocCell.CellType
 }
 
 struct CommCellNewReminder{
@@ -35,11 +36,14 @@ struct ListCellNewReminder{
 struct DatePickerNewReminder{
     let date: Date
 }
-
+struct TimeCellNewReminder{
+    let time: Date
+}
 enum CellNewReminder{
     case doc(DocCellNewReminder)
     case comm(CommCellNewReminder)
     case title(TitleCellNewReminder)
     case list(ListCellNewReminder)
     case date(DatePickerNewReminder)
+    case time(TimeCellNewReminder)
 }

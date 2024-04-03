@@ -17,6 +17,7 @@ class ListCell: UITableViewCell{
         listLabel.text = list
         listIconImageView.image = icon
         listCategoryLabel.text = category
+        self.accessoryType = .disclosureIndicator
     }
     struct ListCells{
         let icon: UIImage?

@@ -7,15 +7,21 @@
 
 import Foundation
 import UIKit
-class CommCell: UITableViewCell{
+class CommCell: UITableViewCell, UITextViewDelegate{
     weak var delegate: NewReminderController?
     
     @IBOutlet weak var commTextView: UITextView!
     
-    func configure(comm: String){
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        commTextView.delegate = self
+    }
+    func configure(comm: String) {
         commTextView.text = comm
     }
-    func textViewDidEndEditing(_ textView: UITextView) {
-            delegate?.textViewDidEndEditing(text: textView.text)
-        }
+            
+    @objc func textViewDidChange(_ textView: UITextView) {
+        delegate?.commTextDidChange(text: textView.text)
+    }
+
 }

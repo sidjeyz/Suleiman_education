@@ -7,22 +7,22 @@
 
 import Foundation
 import UIKit
-class TitleCell: UITableViewCell, UITextFieldDelegate{
-    
-    weak var delegate: NewReminderDelegete?
+class TitleCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var titleTextField: UITextField!
-    var savedText: String = " "
+    weak var delegate: NewReminderDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleTextField.delegate = self
+        titleTextField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
     }
+    
     func configure(title: String){
         titleTextField.text = title
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
-            delegate?.textViewDidEndEditing(text: textView.text)
-        }
+    @objc private func textDidChange(textField: UITextField){
+        delegate?.titleTextDidChange(text: textField.text!)
+    }
 
 }
 

@@ -13,5 +13,6 @@ class DatePickerCell: UITableViewCell{
     
     func configure(date: Date){
         datePickerForSwitch.date = date
+        datePickerForSwitch.minimumDate = Date()
     }
 }

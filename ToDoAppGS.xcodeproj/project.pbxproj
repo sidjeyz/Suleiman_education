@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5EBE14112B88EEA7001437E9 /* NewReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBE14102B88EEA7001437E9 /* NewReminderController.swift */; };
+		5ED01F4E2BB2C3A100B61686 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED01F4D2BB2C3A100B61686 /* TimeCell.swift */; };
+		5ED01F502BB2C3B300B61686 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED01F4F2BB2C3B300B61686 /* TimeCell.xib */; };
 		5ED175302BA0D53500B2014B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1752F2BA0D53500B2014B /* CategoryCell.swift */; };
 		5ED175322BA0D55300B2014B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED175312BA0D55300B2014B /* CategoryCell.xib */; };
 		5ED175362BA0E61F00B2014B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED175352BA0E61F00B2014B /* ListCell.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		5EBE14102B88EEA7001437E9 /* NewReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderController.swift; sourceTree = "<group>"; };
+		5ED01F4D2BB2C3A100B61686 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		5ED01F4F2BB2C3B300B61686 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
 		5ED1752F2BA0D53500B2014B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = ToDoAppGS/Views/CategoryCell.swift; sourceTree = SOURCE_ROOT; };
 		5ED175312BA0D55300B2014B /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoryCell.xib; path = ToDoAppGS/Views/CategoryCell.xib; sourceTree = SOURCE_ROOT; };
 		5ED175352BA0E61F00B2014B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				5ED175412BA1D2DC00B2014B /* DocCell.xib */,
 				5ED1754E2BA8605300B2014B /* DatePickerCell.swift */,
 				5ED1754C2BA6221500B2014B /* DatePickerCell.xib */,
+				5ED01F4D2BB2C3A100B61686 /* TimeCell.swift */,
+				5ED01F4F2BB2C3B300B61686 /* TimeCell.xib */,
 			);
 			path = NewReminderCells;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				5ED1754D2BA6221500B2014B /* DatePickerCell.xib in Resources */,
 				D88566202B66C92F00BDAA88 /* Assets.xcassets in Resources */,
 				5ED175422BA1D2DC00B2014B /* DocCell.xib in Resources */,
+				5ED01F502BB2C3B300B61686 /* TimeCell.xib in Resources */,
 				5ED1753C2BA0E89D00B2014B /* TitleCell.xib in Resources */,
 				D885661E2B66C92E00BDAA88 /* Main.storyboard in Resources */,
 				5ED175322BA0D55300B2014B /* CategoryCell.xib in Resources */,
@@ -276,6 +283,7 @@
 				5ED1753A2BA0E88600B2014B /* TitleCell.swift in Sources */,
 				D885661B2B66C92E00BDAA88 /* ViewController.swift in Sources */,
 				5ED1754F2BA8605300B2014B /* DatePickerCell.swift in Sources */,
+				5ED01F4E2BB2C3A100B61686 /* TimeCell.swift in Sources */,
 				5EDBF8CC2B8BD91E0085B335 /* NewReminderController + TableView.swift in Sources */,
 				D88566172B66C92E00BDAA88 /* AppDelegate.swift in Sources */,
 				5EBE14112B88EEA7001437E9 /* NewReminderController.swift in Sources */,

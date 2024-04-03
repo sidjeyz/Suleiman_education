@@ -8,11 +8,7 @@
 import Foundation
 import UIKit
 
-extension NewReminderController: NewReminderDelegete{
-    func textViewDidEndEditing(text: String) {
-        print("Received text from cell: \(text)")
-
-    }
+extension NewReminderController{
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +24,8 @@ extension NewReminderController: NewReminderDelegete{
             
         case .doc(let docItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DocCell", for: indexPath) as! DocCell
-            cell.configure(text: docItem.title, image: docItem.image, switchState: docItem.switcher)
+            cell.configure(text: docItem.title, image: docItem.image, switchState: docItem.switcher, type: docItem.type)
+            cell.controllerDelegate = self
             return cell
         case .comm(let commItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommCell", for: indexPath) as! CommCell
@@ -48,6 +45,11 @@ extension NewReminderController: NewReminderDelegete{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DatePickerCell", for: indexPath) as! DatePickerCell
             cell.configure(date: dateItem.date)
             return cell
+        case .time(let timeItem):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TimeCell", for: indexPath) as! TimeCell
+            cell.configure(time: timeItem.time)
+            return cell
+            
         }
      
     }
