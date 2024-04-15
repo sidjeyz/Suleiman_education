@@ -8,11 +8,10 @@
 import Foundation
 
 
-struct Task {
-    let title: String
-    let isDone: Bool
-    let creationDate: Date
-    let date: Date
-    let desc: String
-    let priority: Priority
+struct Task: Codable{
+    var title: String?
+    var isDone: Bool?
+    var creationDate: Date?
+    var date: Date?
+    var desc: String?
 }

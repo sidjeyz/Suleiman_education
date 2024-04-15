@@ -10,6 +10,8 @@
 		5EBE14112B88EEA7001437E9 /* NewReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBE14102B88EEA7001437E9 /* NewReminderController.swift */; };
 		5ED01F4E2BB2C3A100B61686 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED01F4D2BB2C3A100B61686 /* TimeCell.swift */; };
 		5ED01F502BB2C3B300B61686 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED01F4F2BB2C3B300B61686 /* TimeCell.xib */; };
+		5ED01F532BC5A18000B61686 /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED01F522BC5A18000B61686 /* TasksService.swift */; };
+		5ED01F552BC5A8BD00B61686 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED01F542BC5A8BD00B61686 /* Constants.swift */; };
 		5ED175302BA0D53500B2014B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1752F2BA0D53500B2014B /* CategoryCell.swift */; };
 		5ED175322BA0D55300B2014B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED175312BA0D55300B2014B /* CategoryCell.xib */; };
 		5ED175362BA0E61F00B2014B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED175352BA0E61F00B2014B /* ListCell.swift */; };
@@ -53,6 +55,8 @@
 		5EBE14102B88EEA7001437E9 /* NewReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderController.swift; sourceTree = "<group>"; };
 		5ED01F4D2BB2C3A100B61686 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		5ED01F4F2BB2C3B300B61686 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
+		5ED01F522BC5A18000B61686 /* TasksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
+		5ED01F542BC5A8BD00B61686 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5ED1752F2BA0D53500B2014B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = ToDoAppGS/Views/CategoryCell.swift; sourceTree = SOURCE_ROOT; };
 		5ED175312BA0D55300B2014B /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoryCell.xib; path = ToDoAppGS/Views/CategoryCell.xib; sourceTree = SOURCE_ROOT; };
 		5ED175352BA0E61F00B2014B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ED01F512BC5A14E00B61686 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5ED01F522BC5A18000B61686 /* TasksService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5ED175332BA0E5C400B2014B /* NewReminder */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,12 +168,14 @@
 		D88566152B66C92E00BDAA88 /* ToDoAppGS */ = {
 			isa = PBXGroup;
 			children = (
+				5ED01F512BC5A14E00B61686 /* Services */,
 				5ED175332BA0E5C400B2014B /* NewReminder */,
 				D8861FBE2B715D5400E18354 /* Views */,
 				D8861FB52B7157E900E18354 /* Model */,
 				D88566162B66C92E00BDAA88 /* AppDelegate.swift */,
 				D88566182B66C92E00BDAA88 /* SceneDelegate.swift */,
 				D885661A2B66C92E00BDAA88 /* ViewController.swift */,
+				5ED01F542BC5A8BD00B61686 /* Constants.swift */,
 				D885661C2B66C92E00BDAA88 /* Main.storyboard */,
 				D885661F2B66C92F00BDAA88 /* Assets.xcassets */,
 				D88566212B66C92F00BDAA88 /* LaunchScreen.storyboard */,
@@ -280,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED175462BA1F18300B2014B /* NewReminderModel.swift in Sources */,
+				5ED01F552BC5A8BD00B61686 /* Constants.swift in Sources */,
 				5ED1753A2BA0E88600B2014B /* TitleCell.swift in Sources */,
 				D885661B2B66C92E00BDAA88 /* ViewController.swift in Sources */,
 				5ED1754F2BA8605300B2014B /* DatePickerCell.swift in Sources */,
+				5ED01F532BC5A18000B61686 /* TasksService.swift in Sources */,
 				5ED01F4E2BB2C3A100B61686 /* TimeCell.swift in Sources */,
 				5EDBF8CC2B8BD91E0085B335 /* NewReminderController + TableView.swift in Sources */,
 				D88566172B66C92E00BDAA88 /* AppDelegate.swift in Sources */,

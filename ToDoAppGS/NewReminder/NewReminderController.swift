@@ -12,6 +12,18 @@ struct NewReminderViewModel{
     var comment: String?
     var category: Category?
     var date: Date?
+    var time: Date?
+    
+    
+    func getTask() -> Task? {
+        guard let title, let comment, let category, let date else {return nil}
+        return Task(title: title,
+                     isDone: false,
+                     creationDate: Date(),
+                     date: date,
+                     desc: comment
+        )
+    }
 }
 class NewReminderController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate {
     
@@ -74,17 +86,38 @@ protocol NewReminderDelegate: AnyObject{
     func commTextDidChange(text: String)
     func didToggleDate(_ isOn: Bool)
     func didToggleTime(_ isOn: Bool)
+    func dateDidChange(date: Date)
+    func timeDidChange(time: Date)
 }
 
 extension NewReminderController: NewReminderDelegate{
+    func dateDidChange(date: Date) {
+        self.model.date = date
+    }
+    
+    func timeDidChange(time: Date) {
+        self.model.time = time
+    }
+    
     func didToggleTime(_ isOn: Bool) {
         var timeRowIndex = 1
-        if isOn {
-            self.sections[2].items.insert(.time(.init(time: Date())), at: timeRowIndex + 1)
-            self.tableViewNewCase.insertRows(at: [.init(row: timeRowIndex + 1, section: 2)], with: .fade)
+        if isOn && self.sections[2].items.count == 3{
+            self.sections[2].items.insert(.time(.init(time: Date())), at: timeRowIndex + 2)
+            self.tableViewNewCase.insertRows(at: [.init(row: timeRowIndex + 2, section: 2)], with: .fade)
+            
         }
-        else{
-            self.sections[2].items.remove(at: timeRowIndex )
+        
+        else if isOn == false && self.sections[2].items.count == 4{
+            self.sections[2].items.remove(at: timeRowIndex + 1)
+            self.tableViewNewCase.deleteRows(at: [.init(row: timeRowIndex + 2, section: 2)], with: .fade)
+        }
+        
+        if isOn && self.sections[2].items.count == 2{
+                self.sections[2].items.insert(.time(.init(time: Date())), at: timeRowIndex + 1)
+                self.tableViewNewCase.insertRows(at: [.init(row: timeRowIndex + 1, section: 2)], with: .fade)
+        }
+        else if isOn == false && self.sections[2].items.count == 3{
+            self.sections[2].items.remove(at: timeRowIndex + 1)
             self.tableViewNewCase.deleteRows(at: [.init(row: timeRowIndex + 1, section: 2)], with: .fade)
         }
     }
@@ -97,7 +130,7 @@ extension NewReminderController: NewReminderDelegate{
         }
         else{
             self.sections[2].items.remove(at: dateRowIndex)
-            self.tableViewNewCase.deleteRows(at: [.init(row: dateRowIndex+1, section: 2)], with: .fade)
+            self.tableViewNewCase.deleteRows(at: [.init(row: dateRowIndex + 1, section: 2)], with: .fade)
         }
         
         

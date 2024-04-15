@@ -44,10 +44,12 @@ extension NewReminderController{
         case .date(let dateItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DatePickerCell", for: indexPath) as! DatePickerCell
             cell.configure(date: dateItem.date)
+            cell.delegate = self
             return cell
         case .time(let timeItem):
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimeCell", for: indexPath) as! TimeCell
             cell.configure(time: timeItem.time)
+            cell.delegate = self
             return cell
             
         }

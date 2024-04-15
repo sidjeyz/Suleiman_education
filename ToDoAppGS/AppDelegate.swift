@@ -14,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print("Мы запустились!")
+        do {
+            try TaskServiesImpl.shared.save(task: .init(title: "aaa", isDone: true, creationDate: Date(), date: Date(), desc: "eee"))
+        } catch {
+            
+        }
         return true
     }
 

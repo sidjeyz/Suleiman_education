@@ -9,8 +9,11 @@ import Foundation
 
 
 struct Category {
+    let id: Int
     let title: String
     let imageURL: String
     let icon: String
-    let tasks: [Task]
+    
+    static let all = Category(id: 0, title: "Все", imageURL: "", icon: "")
+    static let today = Category(id: 1, title: "Сегодня", imageURL: "", icon: "")
 }
