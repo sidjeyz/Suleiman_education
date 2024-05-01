@@ -15,18 +15,19 @@ private let items: [CategoryCells] = [
 extension ViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return tasks.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return items.count / items.count
+        return tasks.count / tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-        cell.configure(icon: item.icon, text: item.text, count: item.count)
-        cell.contentView.layer.cornerRadius = 20
+        //let item = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TasksService", for: indexPath)
+        let task = tasks[indexPath.row]
+        cell.textLabel?.text = task.title
+        cell.detailTextLabel?.text = task.comm
         return cell
     }
 }

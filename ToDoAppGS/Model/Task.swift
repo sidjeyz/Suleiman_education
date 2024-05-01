@@ -13,5 +13,6 @@ struct Task: Codable{
     var isDone: Bool?
     var creationDate: Date?
     var date: Date?
-    var desc: String?
+    var time: Date?
+    var comm: String?
 }

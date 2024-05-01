@@ -11,7 +11,7 @@ protocol TaskService{
     
     func getCategories() -> [Any]
     func save(task: Task) throws
-    func listTasks(in category: Category) -> [Task]
+    func listTasks() -> [Task]
     
 }
 
@@ -20,6 +20,7 @@ class TaskServiesImpl: TaskService{
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     static let shared = TaskServiesImpl()
+    
     func getCategories() -> [Any] {
         return[]
     }
@@ -39,9 +40,16 @@ class TaskServiesImpl: TaskService{
         }
     }
     
-    func listTasks(in category: Category) -> [Task] {
-        return[]
+    func listTasks() -> [Task] {
+        let ud = UserDefaults.standard
+        var task = [Task]()
+        if let currentData = ud.object(forKey: Constants.tasksKey), let tasks = try? decoder.decode([Task].self, from: currentData as! Data) {
+            
+            task = tasks
+            
+        }
+
+        return task
+    
     }
-    
-    
 }

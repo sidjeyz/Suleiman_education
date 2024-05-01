@@ -14,6 +14,7 @@ class TitleCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleTextField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+        titleTextField.delegate = self
     }
     
     func configure(title: String){
@@ -23,6 +24,5 @@ class TitleCell: UITableViewCell, UITextFieldDelegate {
     @objc private func textDidChange(textField: UITextField){
         delegate?.titleTextDidChange(text: textField.text!)
     }
-
 }
 

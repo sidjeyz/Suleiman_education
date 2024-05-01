@@ -14,30 +14,58 @@ struct NewReminderViewModel{
     var date: Date?
     var time: Date?
     
-    
     func getTask() -> Task? {
         guard let title, let comment, let category, let date else {return nil}
         return Task(title: title,
                      isDone: false,
                      creationDate: Date(),
                      date: date,
-                     desc: comment
+                     comm: comment
         )
     }
 }
+
 class NewReminderController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationBarDelegate {
+    
+    let addButton = UIBarButtonItem(title: "Добавить", style: .done, target: self, action: #selector(addNewReminder))
     
     @IBOutlet weak var tableViewNewCase: UITableView!
     
     var sections: [SectionNewReminder] = []
-    private var model: NewReminderViewModel = .init()
+    
+    private var model: NewReminderViewModel = NewReminderViewModel(){
+        didSet {
+            checkField()
+        }
+    }
+    
+    
+    init(){
+        print("я создался")
+        super.init(nibName: nil, bundle: nil)
+        print(Unmanaged.passUnretained(self).toOpaque())
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("я создался")
+        print(Unmanaged.passUnretained(self).toOpaque())
+    }
+    
+    deinit{
+        print("я умер")
+        print(Unmanaged.passUnretained(self).toOpaque())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let barButton = UIBarButtonItem(title: "Отменить", style: .done, target: self, action: #selector(cancelShowNewCase))
-        self.navigationItem.leftBarButtonItem = barButton
+
+        let cancelButton = UIBarButtonItem(title: "Отменить", style: .done, target: self, action: #selector(cancelShowNewCase))
+        self.navigationItem.rightBarButtonItem = addButton
+        addButton.isEnabled = false
+        self.navigationItem.leftBarButtonItem = cancelButton
         self.title = "Новое дело"
+        checkField()
         
         tableViewNewCase.dataSource = self
         tableViewNewCase.delegate = self
@@ -68,16 +96,27 @@ class NewReminderController: UIViewController, UITableViewDataSource, UITableVie
             
             SectionNewReminder(items: [.doc(DocCellNewReminder(image: UIImage(named: "data"), title: "Дата", switcher: false, type: .date)),.doc(DocCellNewReminder(image: UIImage(named: "time"), title: "Время", switcher: false, type: .time))]),
             SectionNewReminder(items: [.doc(DocCellNewReminder(image: UIImage(named: "location"), title: "Местоположение", switcher: false, type: .time))])
-            
-
         ]
-
     }
     
+    func checkField() {
+        addButton.isEnabled = model.title != nil && model.date != nil
+    }
+    
+    @objc func addNewReminder() {
+        let task = Task(title: model.title, date: model.date, time: model.time, comm: model.comment)
+            do {
+                try TaskServiesImpl().save(task: task)
+                dismiss(animated: true, completion: nil)
+            } catch {
+                print("Ошибка при сохранении задания: \(error.localizedDescription)")
+            }
+    }
+
     @objc private func cancelShowNewCase(){
         self.dismiss(animated: true)
     }
-    
+   
 }
 
 

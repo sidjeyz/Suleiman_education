@@ -10,13 +10,19 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
+    var tasks: [Task] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
+       
+        tasks = TaskServiesImpl().listTasks()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        let  nib = UINib(nibName: "CategoryCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CategoryCell")
+        tableView.reloadData()
+        
+        //let  nib = UINib(nibName: "TaskCell", bundle: nil)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TasksService")
         
     }
     
