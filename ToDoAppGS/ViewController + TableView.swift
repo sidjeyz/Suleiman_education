@@ -18,7 +18,9 @@ extension ViewController {
         return tasks.count
     }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
+        #warning("1) Что здесь происходит?")
         return tasks.count / tasks.count
     }
     

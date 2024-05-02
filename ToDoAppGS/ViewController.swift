@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+#warning("2) Сделать отдельную папку для главного экрана и нормально все назвать")
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
@@ -14,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+    #warning("5) А как сделать так, чтобы при каждом заходе на экран обновлялся список? Например, я вот добавил новое задание, а оно не появилось")
         tasks = TaskServiesImpl().listTasks()
         
         tableView.delegate = self
@@ -28,11 +30,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func buttonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let viewconroller = storyboard.instantiateViewController(withIdentifier: "ViewController2")
+        let viewconroller = storyboard.instantiateViewController(withIdentifier: "ViewController2")
         let navVC = UINavigationController(rootViewController: viewconroller)
         navVC.navigationBar.backgroundColor = .systemGray5
         
-    self.present(navVC, animated: true)
+        self.present(navVC, animated: true)
     }
 }
 
