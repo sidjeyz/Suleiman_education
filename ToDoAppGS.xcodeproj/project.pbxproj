@@ -36,6 +36,8 @@
 		D8861FB92B71584000E18354 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8861FB82B71584000E18354 /* Task.swift */; };
 		D8861FBB2B71587500E18354 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8861FBA2B71587500E18354 /* Priority.swift */; };
 		D8861FBD2B715B7D00E18354 /* ViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8861FBC2B715B7D00E18354 /* ViewController + TableView.swift */; };
+		D8B9AF332CA5D404000D1D7D /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B9AF322CA5D404000D1D7D /* LoadingView.xib */; };
+		D8B9AF352CA5D41B000D1D7D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9AF342CA5D41B000D1D7D /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +85,8 @@
 		D8861FB82B71584000E18354 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D8861FBA2B71587500E18354 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		D8861FBC2B715B7D00E18354 /* ViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableView.swift"; sourceTree = "<group>"; };
+		D8B9AF322CA5D404000D1D7D /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		D8B9AF342CA5D41B000D1D7D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		D88566152B66C92E00BDAA88 /* ToDoAppGS */ = {
 			isa = PBXGroup;
 			children = (
+				D8B9AF302CA5D3AE000D1D7D /* UI */,
 				5E22E3C02BE79C0E004BB3B7 /* ViewReminder */,
 				5ED01F512BC5A14E00B61686 /* Services */,
 				5ED175332BA0E5C400B2014B /* NewReminder */,
@@ -219,6 +224,23 @@
 				5E22E3C12BE7A3B6004BB3B7 /* Cells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D8B9AF302CA5D3AE000D1D7D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D8B9AF312CA5D3B9000D1D7D /* Loading View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D8B9AF312CA5D3B9000D1D7D /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				D8B9AF322CA5D404000D1D7D /* LoadingView.xib */,
+				D8B9AF342CA5D41B000D1D7D /* LoadingView.swift */,
+			);
+			path = "Loading View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +312,7 @@
 				5ED1753C2BA0E89D00B2014B /* TitleCell.xib in Resources */,
 				D885661E2B66C92E00BDAA88 /* Main.storyboard in Resources */,
 				5ED175402BA1D04D00B2014B /* CommCell.xib in Resources */,
+				D8B9AF332CA5D404000D1D7D /* LoadingView.xib in Resources */,
 				5ED175382BA0E62D00B2014B /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +337,7 @@
 				D8861FB92B71584000E18354 /* Task.swift in Sources */,
 				5ED1753E2BA1D02A00B2014B /* CommCell.swift in Sources */,
 				D88566192B66C92E00BDAA88 /* SceneDelegate.swift in Sources */,
+				D8B9AF352CA5D41B000D1D7D /* LoadingView.swift in Sources */,
 				5E22E3C32BE7A493004BB3B7 /* TemporaryCell.swift in Sources */,
 				5ED175442BA1D2ED00B2014B /* DocCell.swift in Sources */,
 				5ED175362BA0E61F00B2014B /* ListCell.swift in Sources */,
