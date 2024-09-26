@@ -42,14 +42,12 @@ class TaskServiesImpl: TaskService{
     
     func listTasks() -> [Task] {
         let ud = UserDefaults.standard
-        #warning("3) Нейминг. Тут множественное число, надо использовать tasks")
-        var task = [Task]()
-        #warning("4) Не использовать force unwrap")
-        if let currentData = ud.object(forKey: Constants.tasksKey), let tasks = try? decoder.decode([Task].self, from: currentData as! Data) {
-            task = tasks
+        var tasks = [Task]()
+        if let currentData = ud.object(forKey: Constants.tasksKey), let task = try? decoder.decode([Task].self, from: currentData as! Data) {
+            tasks = task
         }
 
-        return task
+        return tasks
     
     }
 }

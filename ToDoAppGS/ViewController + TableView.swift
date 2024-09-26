@@ -7,11 +7,11 @@
 
 import Foundation
 import UIKit
-private let items: [CategoryCells] = [
-    CategoryCells(icon: UIImage(named: "all"), count: "5", text: "Все"),
-    CategoryCells(icon: UIImage(named: "family"), count: "3", text: "Семья"),
-    CategoryCells(icon: UIImage(named: "work"), count: "4", text: "Работа")
-]
+//private let items: [CategoryCells] = [
+  //  CategoryCells(icon: UIImage(named: "all"), count: "5", text: "Все"),
+    //CategoryCells(icon: UIImage(named: "family"), count: "3", text: "Семья"),
+    //CategoryCells(icon: UIImage(named: "work"), count: "4", text: "Работа")
+//]
 extension ViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,16 +20,25 @@ extension ViewController {
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        #warning("1) Что здесь происходит?")
         return tasks.count / tasks.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 60
+        
+    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let item = items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TasksService", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TemporaryCell", for: indexPath) as! TemporaryCell
         let task = tasks[indexPath.row]
-        cell.textLabel?.text = task.title
-        cell.detailTextLabel?.text = task.comm
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        cell.configure(title: task.title! , date: dateFormatter.string(from: task.date!), image: UIImage(named: "offButton")!)
         return cell
     }
 }
