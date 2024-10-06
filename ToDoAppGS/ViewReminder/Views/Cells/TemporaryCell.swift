@@ -14,6 +14,8 @@ class TemporaryCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var isStrikethrough = false
+    
     var originalImage: UIImage?
     var alternateImage: UIImage?
 
@@ -39,14 +41,24 @@ class TemporaryCell: UITableViewCell {
     
     @objc func imageTapped() {
 
-            if temporaryImageView.image == originalImage {
-                temporaryImageView.image = alternateImage
-            } else {
-                temporaryImageView.image = originalImage
+        if temporaryImageView.image == originalImage {
+                    temporaryImageView.image = alternateImage
+                } else {
+                    temporaryImageView.image = originalImage
+                }
+
+                if let text = titleLabel.text {
+                    let attributedString = NSMutableAttributedString(string: text)
+
+                    if isStrikethrough {
+                        attributedString.removeAttribute(.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
+                    } else {
+                        attributedString.addAttribute(.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+                    }
+
+                    titleLabel.attributedText = attributedString
+                    isStrikethrough.toggle()
+                }
             }
 
-        
-        }
-
-    
 }

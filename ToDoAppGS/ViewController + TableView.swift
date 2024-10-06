@@ -19,7 +19,7 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        #error("Сделать логику после нажатия на ячейку")
+        //#error("Сделать логику после нажатия на ячейку")
         print(tasks[indexPath.row])
     }
     
@@ -30,8 +30,8 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        #error("Ячейка может быть разной высоты")
-        return 60
+        //#error("Ячейка может быть разной высоты")
+        return UITableView.automaticDimension
         
     }
 

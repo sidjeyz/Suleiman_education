@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        override func viewDidLoad() {
            super.viewDidLoad()
            
+           tableView.estimatedRowHeight = 44
+           tableView.rowHeight = UITableView.automaticDimension
+           
            loadingView = Bundle.main.loadNibNamed("LoadingView", owner: nil, options: nil)![0] as? LoadingView
            loadingView.translatesAutoresizingMaskIntoConstraints = false
            
@@ -33,9 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             loadingView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 24),
             loadingView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -24)
            ])
-           
            #warning("Задание домой: Нужно после 2-х секунд скрыть лоадер и показать табличку")
-           
+           DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+               self.loadingView.removeFromSuperview()
+               self.tableView.isHidden = false
+           }
+
            tableView.isHidden = true
            
            tasks = taskService.listTasks()
